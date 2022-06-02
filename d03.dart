@@ -18,7 +18,7 @@ this is str2
   String str1s = '你好';
   String str2s = 'dart';
   print("$str1s $str2s");
-  print(str1s + " " + str2s);
+  print(str1s + " + " + str2s);
 
   int a = 123;
   print(a);
