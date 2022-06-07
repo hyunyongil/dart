@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void printInfo() {
   print('我是一个自动以方法');
 }
@@ -30,6 +32,30 @@ fn2(fn) {
   fn();
 }
 
+makeStart(int num) {
+  for (int i = 1; i <= num; i++) {
+    for (int j = 1; j <= i; j++) {
+      stdout.write('*');
+    }
+    print("");
+  }
+}
+
+makeStartTri(int num) {
+  for (var i = 0; i <= num; i++) {
+    //控制行数
+    for (var k = 0; k <= (num - 1 - i); k++) {
+      //控制空格的个数
+      stdout.write("  ");
+    }
+    for (var j = 0; j < i; j++) {
+      //控制对应星号打印的间隔星号
+      stdout.write("*" + "   ");
+    }
+    stdout.write("\n"); //换行操作
+  }
+}
+
 // var fn = () {
 //   print('我是一个匿名方法');
 // };
@@ -58,4 +84,7 @@ void main() {
   xxx();
 
   fn2(fn1);
+
+  makeStart(10);
+  makeStartTri(5);
 }
