@@ -29,7 +29,7 @@ class B {
 }
 
 class C extends Person with A, B {
-  C(super.name, super.age);
+  C(String name, int age) : super(name, age);
 }
 
 void main() {
